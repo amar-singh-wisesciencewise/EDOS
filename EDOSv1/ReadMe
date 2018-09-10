@@ -13,3 +13,5 @@
 2. create a ThreadD object.
 3. call the ThreadStart API with proper arguments.
 4. do not forget to write your regitered thread function ;)
+
+NOTE: To overcome some shortcomings of CCS around "C and Assembly mixing" has made me do idiosyncratic things in the code.
