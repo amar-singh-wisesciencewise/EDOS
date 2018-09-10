@@ -37,7 +37,7 @@ int ThreadStart(ThreadD* self, ThreadHandler threadHandler, void* stackStart, un
     }
 
     //stack preparation
-    *(--sp) = (1U << 24);  // xPSR: thread mode set; ARM Cortex M cannot be in any other mode
+    *(--sp) = (1U << 24);  // xPSR: Thumb Instruction Mode set; ARM Cortex M cannot be in any other mode (ARM)
     *(--sp) = (unsigned int)threadHandler; //Program Counter
 
     //saving the SP top in the Thread Descriptor
@@ -67,7 +67,8 @@ void EDOSScheduler(){
     NextThread = ThreadDList[CurrentThreadID++];
 
     //set the PendSV interrupt
-    if (NextThread != CurrentThread) {
+   // if (NextThread != CurrentThread) 
+    {
         *(unsigned int volatile *)0xE000ED04 |= (1U << 28);
     }
 
