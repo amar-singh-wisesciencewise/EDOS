@@ -1,6 +1,6 @@
-#First Version of EDOS:
+First Version of EDOS:
 
-##Feature:
+#Feature:
 1. Floating Point Unit is Disabled
 2. Main Stack Pointer is used for SP
 3. SysTick ISR is used to call the Scheduler (Round Robin)
@@ -9,7 +9,7 @@
 6. Threads must have while(1) i.e. threads completion not allowed.
 
 
-##Steps to create and start a Thread/Task: (main.c should give an idea)
+#Steps to create and start a Thread/Task: (main.c should give an idea)
 1. create a stack i.e. an integer array.
 2. create a ThreadD object.
 3. call the ThreadStart API with proper arguments.
