@@ -5,7 +5,8 @@
 2. Main Stack Pointer is used for SP
 3. SysTick ISR is used to call the Scheduler (Round Robin)
 4. PendSV ISR is used to do the context switching
-5. SVC ISR is used to start the EDOS
+5. SVC ISR is used to start the EDOS i.e. put the first thread in execution and afterwards SysTick takes over. 
+6. Threads must have while(1) i.e. threads completion not allowed.
 
 
 ##Steps to create and start a Thread/Task: (main.c should give an idea)
