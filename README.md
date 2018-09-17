@@ -2,7 +2,7 @@
 # EDOS: Embedded Deterministic Operating System
 
 
-EDOS is a rudimentary RTOS written for TM4C1294XL Controller using Code Composer Studio IDE
+EDOS is a rudimentary RTOS written for TM4C1294XL Controller using Code Composer Studio IDE. 
 
 Requirement:
 1. TM4C1294XL
@@ -15,6 +15,7 @@ Feature:
 3. SysTick ISR is used to call the Scheduler (Round Robin)
 4. PendSV ISR is used to do the context switching
 5. SVC ISR is used to start the EDOS
+NOTE: New versions will add new features.
 
 API:
 ThreadStart(ThreadD* self,ThreadHandler threadHandler, void* stackStart, unsigned int stackSize)
